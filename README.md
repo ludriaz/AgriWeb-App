@@ -28,7 +28,8 @@ HTML & CSS (Interfaz básica del usuario)
 
 Modifica la siguiente configuración con los valores obtenidos de Firebase:
 
-`const firebaseConfig = {
+```
+const firebaseConfig = {
     apiKey: "TU_API_KEY",
     authDomain: "TU_AUTH_DOMAIN",
     projectId: "TU_PROJECT_ID",
@@ -36,7 +37,8 @@ Modifica la siguiente configuración con los valores obtenidos de Firebase:
     messagingSenderId: "TU_MESSAGING_SENDER_ID",
     appId: "TU_APP_ID",
     measurementId: "TU_MEASUREMENT_ID"
-};`
+};
+```
 
 ## Uso
 
