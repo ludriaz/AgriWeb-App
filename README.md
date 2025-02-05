@@ -12,23 +12,23 @@ HTML & CSS (Interfaz básica del usuario)
 
 ## Configuración
 
-1. Crear un Proyecto en Firebase
+### 1. Crear un Proyecto en Firebase
 
-Si aún no tienes un proyecto en Firebase, sigue estos pasos:
+    Si aún no tienes un proyecto en Firebase, sigue estos pasos:
 
-Ve a Firebase Console
+        Ve a Firebase Console
 
-Crea un nuevo proyecto.
+        Crea un nuevo proyecto.
 
-Habilita la autenticación con correo y contraseña en la sección de "Authentication".
+        Habilita la autenticación con correo y contraseña en la sección de "Authentication".
 
-Obtén la configuración del SDK en la sección de "Project Settings" y reemplaza los valores en firebaseConfig.
+        Obtén la configuración del SDK en la sección de "Project Settings" y reemplaza los valores en firebaseConfig.
 
-2. Configurar Firebase en el Proyecto
+### 2. Configurar Firebase en el Proyecto
 
 Modifica la siguiente configuración con los valores obtenidos de Firebase:
 
-const firebaseConfig = {
+`const firebaseConfig = {
     apiKey: "TU_API_KEY",
     authDomain: "TU_AUTH_DOMAIN",
     projectId: "TU_PROJECT_ID",
@@ -36,11 +36,11 @@ const firebaseConfig = {
     messagingSenderId: "TU_MESSAGING_SENDER_ID",
     appId: "TU_APP_ID",
     measurementId: "TU_MEASUREMENT_ID"
-};
+};`
 
-Uso
+## Uso
 
-Iniciar Sesión
+### Iniciar Sesión
 
 Ingresa un correo electrónico y una contraseña en el formulario.
 
@@ -48,7 +48,7 @@ Presiona el botón de "Iniciar Sesión".
 
 Si las credenciales son correctas, se mostrará un mensaje de éxito.
 
-Registrarse
+### Registrarse
 
 Ingresa un correo electrónico y una contraseña en el formulario.
 
