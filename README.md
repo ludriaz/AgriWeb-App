@@ -21,7 +21,7 @@ HTML & CSS (Interfaz básica del usuario)
         Crea un nuevo proyecto.
 
         Dentro del proyecto crea una nueva app Web, como se ve en la imagen:
-        ![image](https://github.com/user-attachments/assets/f62424aa-18bb-430d-b355-bfa44db9f865)
+![image](https://github.com/user-attachments/assets/f62424aa-18bb-430d-b355-bfa44db9f865)
 
         
         Una vez creada la app, habilita la autenticación con correo y contraseña en la sección de "Authentication".
