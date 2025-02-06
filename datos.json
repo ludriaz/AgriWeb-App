@@ -1,0 +1,10 @@
+{
+    "data": [
+      { "name": "Juan", "age": 28, "city": "Madrid" },
+      { "name": "Ana", "age": 22, "city": "Barcelona" },
+      { "name": "Carlos", "age": 35, "city": "Sevilla" },
+      { "name": "María", "age": 30, "city": "Valencia" },
+      { "name": "Pedro", "age": 40, "city": "Bilbao" }
+    ]
+  }
+  
