@@ -25,9 +25,9 @@ HTML & CSS (Interfaz básica del usuario)
 
         
         Una vez creada la app, habilita la autenticación con correo y contraseña en la sección de "Authentication".
-        ![image](https://github.com/user-attachments/assets/df8d3e5f-255f-4e3f-9e66-1da2cf720a00)
-        ![image](https://github.com/user-attachments/assets/d8f8949d-2927-4d08-9d06-e9f947664e24)
-        ![image](https://github.com/user-attachments/assets/98215fa1-b9fe-4c70-b6cf-4d8d5278f823)
+![image](https://github.com/user-attachments/assets/df8d3e5f-255f-4e3f-9e66-1da2cf720a00)
+![image](https://github.com/user-attachments/assets/d8f8949d-2927-4d08-9d06-e9f947664e24)
+![image](https://github.com/user-attachments/assets/98215fa1-b9fe-4c70-b6cf-4d8d5278f823)
 
         Obtén la configuración del SDK en la sección de "Project Settings" y reemplaza los valores en firebaseConfig.
 
