@@ -1,35 +1,52 @@
-# AgriWeb-App
-Plataforma Inteligente de Agricultura Local
-# MANUAL BASICO PARA LA CREACION DE DATATABLES
- DataTables es un plugin muy útil para crear tablas interactivas con características como paginación, búsqueda y ordenación.
- 
- 1. INCLUIR LAS DEPENDENCIAS
-Lo primero es incluir los archivos necesarios de jQuery y DataTables en tu proyecto. Puedes hacerlo de la siguiente forma:
-  <!-- Incluir jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+# Ejemplo de Datatables con JSON
 
-  <!-- Incluir JS y el CSS de DataTables -->
- <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+Este proyecto es un ejemplo de cómo utilizar la librería DataTables para mostrar datos en una tabla HTML a partir de un archivo JSON.
 
-2. CREAR UNA TABLA HTML BASICA
-Crea una tabla sencilla en HTML. Aquí tienes un ejemplo básico:
-ejemplo:
-vconst articleTab1 = document.getElementById('tab1');
- 
- 
-    let tablaContenedor = articleTab1.querySelector('.tabla-alumno');
-    if (!tablaContenedor) {
-        tablaContenedor = document.createElement('div');
-        tablaContenedor.classList.add('tabla-alumno');
-        articleTab1.appendChild(tablaContenedor);
+## Tecnologías utilizadas
+
+HTML para la estructura de la página.
+
+JavaScript para la manipulación del DOM.
+
+jQuery para facilitar la manipulación de la tabla y el manejo de eventos.
+
+DataTables para la creación y gestión de la tabla con funcionalidades avanzadas.
+
+JSON como fuente de datos para la tabla.
+
+## USO
+
+Asegurarse de que el archivo datos.json contiene datos en el siguiente formato dado que de ahaí sacará la información del json: 
+
+[
+    {
+        "Nombre ciudad": "Madrid",
+        "Temperatura actual": "15°C",
+        "Condicion Meteorologica": "Soleado",
+        "Region": "Madrid",
+        "Pais": "España",
+        "Hora": "12:00 PM"
     }
- 
-   
-    const borrarTabla = tablaContenedor.querySelector('table');
-    if (borrarTabla) {
-        tablaContenedor.removeChild(borrarTabla);  // Elimina la tabla de alumnos anterior
-    }
-    
-    3. INICIALIZAR DATATABLES EN JQUERY
-    4. 
+]
+
+Abrir index.html en un navegador.
+
+La tabla debería poblarse automáticamente con los datos del archivo JSON.
+
+## Código clave
+
+El script principal para inicializar DataTables en script.js:
+
+$(document).ready(function() {
+    $('#example').DataTable({
+        ajax: 'datos.json',
+        columns: [
+            { data: 'Nombre ciudad' },
+            { data: 'Temperatura actual' },
+            { data: 'Condicion Meteorologica' },
+            { data: 'Region' },
+            { data: 'Pais' },
+            { data: 'Hora' }
+        ]
+    });
+});
