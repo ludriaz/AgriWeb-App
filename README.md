@@ -17,7 +17,7 @@ JSON como fuente de datos para la tabla.
 ## USO
 
 Asegurarse de que el archivo datos.json contiene datos en el siguiente formato dado que de ahaí sacará la información del json: 
-
+```
 [
     {
         "Nombre ciudad": "Madrid",
@@ -28,6 +28,7 @@ Asegurarse de que el archivo datos.json contiene datos en el siguiente formato d
         "Hora": "12:00 PM"
     }
 ]
+```
 
 Abrir index.html en un navegador.
 
@@ -36,7 +37,7 @@ La tabla debería poblarse automáticamente con los datos del archivo JSON.
 ## Código clave
 
 El script principal para inicializar DataTables en script.js:
-
+```
 $(document).ready(function() {
     $('#example').DataTable({
         ajax: 'datos.json',
@@ -50,3 +51,4 @@ $(document).ready(function() {
         ]
     });
 });
+```
