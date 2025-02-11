@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Es un perro?</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Cargar TensorFlow.js y MobileNet -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+
+    <!-- Enlace al archivo JS -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Es un perro?</h1>
+        <p>Toma una foto y averigua si es un perro o no.</p>
+
+        <!-- Video para mostrar la cámara -->
+        <video id="camera" autoplay playsinline></video>
+
+        <!-- Canvas para mostrar la imagen capturada -->
+        <canvas id="snapshot"></canvas>
+
+        <br>
+        <!-- Botón para capturar la foto -->
+         <div id="buttonContainer">
+            <button id="capture">Capturar Foto</button>
+
+            <button id="insertButton">Insertar Foto</button>
+            <input type="file" accept="image/*" id="fileInput">
+         </div>
+
+
+        <!-- Resultado del modelo -->
+        <p id="result" style="margin-top: 20px; font-size: 18px;"></p>
+    </div>
+</body>
+</html>
