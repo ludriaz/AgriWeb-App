@@ -5,8 +5,8 @@ Aplicacion web que muestra un mapa de Castro Urdiales utilizando la biblioteca d
 - OpenStreetMap (proveedor de mapas base)
 - OpenWeatherMap (API)
 
-##Como consturir e inicializar el mapa
-dentro de la pagina oficial de la API leaflet existe un pequeño tutorial para ello: 
+## Como construir e inicializar el mapa
+Dentro de la pagina oficial de la API leaflet existe un pequeño tutorial para ello: 
 https://leafletjs.com/examples/quick-start/
 
 1- Exportar el link del CSS y DESPUES de este, el script de Leaflet dentro del index
