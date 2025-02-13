@@ -12,10 +12,13 @@ function inicio() {
 
     const ctx = canvas.getContext('2d');
     
+    let streamCamara
+    let posiCamara = 'environment' 
+
     async function setupCamera() {
         // Solicitar acceso a la cámara
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        video.srcObject = stream;
+        streamCamara = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = streamCamara;
     }
     
     async function loadModelAndPredict(image) {
@@ -67,20 +70,32 @@ function inicio() {
         console.log("Contenido de para movil");
 
         let cambiarCamara = document.createElement("button")
-        cambiarCamara.textContent = "Cámara trasera"
+        cambiarCamara.classList.add("imgCamara")
         
+        document.getElementById("buttonContainer").innerHTML += "<br>"
         document.getElementById("buttonContainer").appendChild(cambiarCamara)
 
+        // environment - camara trasera / user - camara frontal
         cambiarCamara.addEventListener("click", (e) => {
+            if(streamCamara) {
+                streamCamara.getTracks().forEach(track => track.stop())              
+            }
+
             navigator.mediaDevices.getUserMedia({
                 video: {
-                    facingMode: { exact: 'environment'}
+                    facingMode: { exact: `${posiCamara}`}
                 }
             }).then(function(stream) {
-                video.srcObject = stream;
+                streamCamara = stream;
+                video.srcObject = streamCamara;
             }).catch(function(error) {
                 alert("Error con la camara: " + error);
             })
+
+            if (posiCamara == 'environment')
+                posiCamara = 'user'
+            else
+                posiCamara = 'environment'
         })
     }
     
@@ -114,5 +129,3 @@ function inicio() {
     // Inicializar la cámara al cargar la página
     setupCamera();
 }
-
-

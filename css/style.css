@@ -49,3 +49,12 @@ button:hover {
 #fileInput {
     display: none;
 }
+
+.imgCamara {
+    padding: 4%;
+    background-image: url(./img/camara.png);
+    background-color: #007BFF;
+    background-size: cover;
+    background-position: center;
+    border: solid 1px white;
+}
